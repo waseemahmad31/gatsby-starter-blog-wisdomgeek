@@ -4,36 +4,31 @@ module.exports = {
     tagline: 'Geek',
     socialLinks: [
       {
-        name: 'Facebook',
         link: 'https://www.facebook.com/wisdomgeek/',
         faIcon: 'facebook',
       },
       {
-        name: 'LinkedIn',
         link: 'httsp://www.linkedin.com/company/wisdomgeek',
         faIcon: 'linkedin',
       },
       {
-        name: 'YouTube',
         link: 'https://www.youtube.com/channel/UClW56GhpAKrRu-ZSqAoPjHg',
         faIcon: 'youtube',
       },
       {
-        name: 'Twitter',
         link: 'https://www.twitter.com/saranshk/',
         faIcon: 'twitter',
       },
       {
-        name: 'Instagram',
         link: 'https://www.instagram.com/kataria.saransh/',
         faIcon: 'instagram',
       },
       {
-        name: 'Github',
         link: 'https://github.com/saranshkataria/',
         faIcon: 'github',
       },
     ],
+    copyrightText: `Wisdom Geek, 2015 - ${new Date().getFullYear()}. All Rights Reserved.`,
   },
   plugins: [
     {

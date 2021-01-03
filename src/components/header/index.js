@@ -5,14 +5,14 @@ import SocialLink from './social-link';
 
 const homeStyle = {
   textDecoration: `none`,
-  color: `white`,
 };
 
 const headerContainerStyle = {
-  background: `linear-gradient(-45deg,#116ace,#0d42a2)`,
   marginBottom: `1.45rem`,
   margin: `0 auto`,
 };
+
+const siteTitleStyle = { margin: 0, display: `inline-block` };
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,6 @@ const Header = () => {
           title
           tagline
           socialLinks {
-            name
             link
             faIcon
           }
@@ -32,16 +31,16 @@ const Header = () => {
   `);
   return (
     <header style={headerContainerStyle}>
-      <h1 style={{ margin: 0 }}>
+      <h1 style={siteTitleStyle}>
         <Link to="/" style={homeStyle}>
           {data.site.siteMetadata.title} {data.site.siteMetadata.tagline}
         </Link>
-        {data.site.siteMetadata.socialLinks.length > 0 &&
-          data.site.siteMetadata.socialLinks.map(({ name, link, faIcon }) => (
-            <SocialLink link={link} name={name} faIcon={faIcon}></SocialLink>
-          ))}
       </h1>
       <NavBar />
+      {data.site.siteMetadata.socialLinks.length > 0 &&
+        data.site.siteMetadata.socialLinks.map(({ name, link, faIcon }) => (
+          <SocialLink link={link} faIcon={faIcon} key={link}></SocialLink>
+        ))}
     </header>
   );
 };

@@ -1,36 +1,32 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import links from '../../constants/links';
 
-const navbarStyle = {
-  display: `inline-block`,
+const navBarStyle = {
   marginLeft: `1rem`,
-  listStyle: `none`,
-  background: 'white',
+  display: `inline-block`,
 };
 
-const listItemStyle = {
-  display: `inline-block`,
+const listContainerStyle = {
+  listStyle: `none`,
+  ...navBarStyle,
+};
+
+const linkStyle = {
+  textDecoration: `none`,
 };
 
 const NavBar = () => (
-  <nav>
-    <ul style={navbarStyle}>
-      <li style={listItemStyle}>
-        <Link to="/">Home</Link>
-      </li>
-      <li style={listItemStyle}>
-        <Link to="/development">Development</Link>
-      </li>
-      <li style={listItemStyle}>
-        <Link to="/self-help">Self Help</Link>
-      </li>
-      <li style={listItemStyle}>
-        <Link to="/about">About</Link>
-      </li>
-      <li style={listItemStyle}>
-        <Link to="/privacy-policy">Privacy Policy</Link>
-      </li>
-      <li style={listItemStyle}>Search</li>
+  <nav style={navBarStyle}>
+    <ul style={listContainerStyle}>
+      {links.map((link) => (
+        <li style={navBarStyle}>
+          <Link to={link.to} style={linkStyle}>
+            {link.name}
+          </Link>
+        </li>
+      ))}
+      <li style={navBarStyle}>Search</li>
     </ul>
   </nav>
 );
