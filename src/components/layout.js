@@ -1,6 +1,24 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faFacebook,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faTwitter,
+  faYoutube,
+} from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import Footer from './footer';
 import Header from './header';
+
+library.add(
+  faFacebook,
+  faTwitter,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faYoutube
+);
 
 const pageStyles = {
   color: '#232129',
