@@ -20,7 +20,7 @@ const NavBar = () => (
   <nav style={navBarStyle}>
     <ul style={listContainerStyle}>
       {links.map((link) => (
-        <li style={navBarStyle}>
+        <li style={navBarStyle} key={link.name}>
           <Link to={link.to} style={linkStyle}>
             {link.name}
           </Link>
