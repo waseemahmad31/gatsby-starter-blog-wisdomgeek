@@ -6,7 +6,6 @@ import Posts from '../components/posts';
 const IndexPage = () => {
   return (
     <Layout>
-      <title>Home Page</title>
       <Posts />
     </Layout>
   );
