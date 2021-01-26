@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import Image from 'gatsby-image';
 import React from 'react';
+import Post from './post';
 
 const getPosts = graphql`
   {
@@ -37,15 +37,7 @@ export const Posts = () => {
   return (
     <div>
       {posts.map(({ node }, index) => {
-        return (
-          <div key={index}>
-            {node.frontmatter.title}, {node.frontmatter.description}
-            <Image
-              fluid={node.frontmatter.image.childImageSharp.fluid}
-              alt={node.frontmatter.image.name}
-            />
-          </div>
-        );
+        return <Post frontmatter={node.frontmatter} key={index} />;
       })}
     </div>
   );
