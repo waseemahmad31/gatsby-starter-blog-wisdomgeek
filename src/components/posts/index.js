@@ -14,6 +14,7 @@ const getPosts = graphql`
             date(formatString: "MMMM Do, YYYY")
             author
             description
+            categories
             image {
               name
               childImageSharp {
