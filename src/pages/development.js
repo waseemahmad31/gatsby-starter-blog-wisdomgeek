@@ -5,7 +5,10 @@ import Posts from '../components/posts';
 
 const getPosts = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
+    allMdx(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { frontmatter: { categories: { in: "development" } } }
+    ) {
       totalCount
       edges {
         node {
@@ -32,7 +35,7 @@ const getPosts = graphql`
   }
 `;
 
-const IndexPage = () => {
+const SelfHelPage = () => {
   const response = useStaticQuery(getPosts);
   const posts = response.allMdx.edges;
   return (
@@ -42,4 +45,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default SelfHelPage;
