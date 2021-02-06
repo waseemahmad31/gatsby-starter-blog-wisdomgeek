@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 const PostTemplate = ({ data }) => {
   const {
     mdx: {

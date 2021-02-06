@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import links from '../../constants/links';
 
 const navBarStyle = {
   marginLeft: `1rem`,
@@ -16,10 +15,10 @@ const linkStyle = {
   textDecoration: `none`,
 };
 
-const NavBar = () => (
+const NavBar = ({ navigationLinks }) => (
   <nav style={navBarStyle}>
     <ul style={listContainerStyle}>
-      {links.map((link) => (
+      {navigationLinks.map((link) => (
         <li style={navBarStyle} key={link.name}>
           <Link to={link.to} style={linkStyle}>
             {link.name}

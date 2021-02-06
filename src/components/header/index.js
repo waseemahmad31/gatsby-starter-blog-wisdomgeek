@@ -25,6 +25,10 @@ const Header = () => {
             link
             faIcon
           }
+          navigationLinks {
+            name
+            to
+          }
         }
       }
     }
@@ -36,7 +40,7 @@ const Header = () => {
           {data.site.siteMetadata.title} {data.site.siteMetadata.tagline}
         </Link>
       </h1>
-      <NavBar />
+      <NavBar navigationLinks={data.site.siteMetadata.navigationLinks} />
       {data.site.siteMetadata.socialLinks.length > 0 &&
         data.site.siteMetadata.socialLinks.map(({ name, link, faIcon }) => (
           <SocialLink link={link} faIcon={faIcon} key={link}></SocialLink>

@@ -28,6 +28,14 @@ module.exports = {
         faIcon: 'github',
       },
     ],
+    navigationLinks: [
+      { name: 'Home', to: '/' },
+      { name: 'Development', to: '/development/' },
+      { name: 'Self Help', to: '/self-help/' },
+      { name: 'About', to: '/about/' },
+      { name: 'Contact', to: '/contact/' },
+      { name: 'Privacy Policy', to: '/privacy-policy/' },
+    ],
     copyrightText: `Wisdom Geek, 2015 - ${new Date().getFullYear()}. All Rights Reserved.`,
   },
   plugins: [

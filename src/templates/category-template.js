@@ -2,43 +2,44 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import Posts from '../components/posts';
-
-const IndexPage = ({ data }) => {
+const CategoryTemplate = (props) => {
   const {
-    allMdx: { nodes: posts },
-  } = data;
+    data: {
+      categories: { nodes: posts },
+    },
+  } = props;
   return (
     <Layout>
       <Posts posts={posts} />
     </Layout>
   );
 };
-
 export const query = graphql`
-  {
-    allMdx(sort: { fields: frontmatter___date, order: DESC }) {
-      totalCount
+  query GetCategoryPosts($category: String!) {
+    categories: allMdx(
+      filter: { frontmatter: { categories: { in: [$category] } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
         frontmatter {
           title
-          slug
-          date(formatString: "MMMM Do, YYYY")
-          author
-          description
           categories
+          date(formatString: "MMMM Do, YYYY")
+          slug
+          author
           image {
-            name
             childImageSharp {
               fluid {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
               }
             }
           }
         }
         excerpt
+        id
       }
     }
   }
 `;
 
-export default IndexPage;
+export default CategoryTemplate;
