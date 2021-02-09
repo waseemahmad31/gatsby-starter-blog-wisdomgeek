@@ -13,6 +13,11 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allAuthorsJson {
+        nodes {
+          id
+        }
+      }
     }
   `);
 
@@ -41,6 +46,16 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`src/templates/category-template.js`),
       context: {
         category,
+      },
+    });
+  });
+
+  result.data.allAuthorsJson.nodes.forEach((author) => {
+    createPage({
+      path: `/author/${author.id.toLocaleLowerCase().replace(/ /g, '')}/`,
+      component: path.resolve(`src/templates/author-template.js`),
+      context: {
+        authorId: author.id,
       },
     });
   });

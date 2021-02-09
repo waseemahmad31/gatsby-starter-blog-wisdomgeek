@@ -1,7 +1,7 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import SocialLink from '../social-link';
 import NavBar from './navbar';
-import SocialLink from './social-link';
 
 const homeStyle = {
   textDecoration: `none`,
@@ -42,7 +42,7 @@ const Header = () => {
       </h1>
       <NavBar navigationLinks={data.site.siteMetadata.navigationLinks} />
       {data.site.siteMetadata.socialLinks.length > 0 &&
-        data.site.siteMetadata.socialLinks.map(({ name, link, faIcon }) => (
+        data.site.siteMetadata.socialLinks.map(({ link, faIcon }) => (
           <SocialLink link={link} faIcon={faIcon} key={link}></SocialLink>
         ))}
     </header>

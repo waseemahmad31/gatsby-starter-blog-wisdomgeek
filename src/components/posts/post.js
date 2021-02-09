@@ -26,10 +26,9 @@ const Post = ({ frontmatter }) => {
     author,
     date,
   } = frontmatter;
-  debugger;
   const mainCategory = categories[categories.length - 1],
     postUrl = `/${categories.join('/')}/${slug}/`,
-    authorUrl = `/author/${author.toLocaleLowerCase().replace(/ /g, '-')}/`,
+    authorUrl = `/author/${author.toLocaleLowerCase().replace(/ /g, '')}/`,
     categoryUrl = `/${categories.join('/')}/`;
   return (
     <article style={articleStyle}>

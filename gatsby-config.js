@@ -80,5 +80,9 @@ module.exports = {
         path: `${__dirname}/src/posts/`,
       },
     },
+    `gatsby-transformer-json`,
   ],
+  mapping: {
+    'MarkdownRemark.frontmatter.author': `AuthorsJson`,
+  },
 };
