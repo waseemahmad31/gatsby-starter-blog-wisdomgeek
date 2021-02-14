@@ -37,6 +37,7 @@ module.exports = {
       { name: 'Privacy Policy', to: '/privacy-policy/' },
     ],
     copyrightText: `Wisdom Geek, 2015 - ${new Date().getFullYear()}. All Rights Reserved.`,
+    postsPerPage: 12,
   },
   plugins: [
     {
