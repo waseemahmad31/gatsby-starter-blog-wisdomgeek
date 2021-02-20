@@ -1,0 +1,28 @@
+[
+  {
+    "id": "Saransh Kataria",
+    "bio": "Born in Delhi, India, Saransh Kataria is the brain behind Wisdom Geek. Currently, Saransh is a software developer at a reputed firm in Spokane, Washington and he likes playing with new technologies to explore different possibilities. He holds an engineering degree in Computer Science. He also shares his passion for sharing knowledge as the community lead at Facebook Developer Circle Delhi, NCR which is a developer community in Delhi, India.",
+    "socialLinks": [
+      {
+        "link": "https://www.facebook.com/wisdomgeek/",
+        "faIcon": "facebook"
+      },
+      {
+        "link": "httsp://www.linkedin.com/company/wisdomgeek",
+        "faIcon": "linkedin"
+      },
+      {
+        "link": "https://www.twitter.com/saranshk/",
+        "faIcon": "twitter"
+      },
+      {
+        "link": "https://www.instagram.com/kataria.saransh/",
+        "faIcon": "instagram"
+      },
+      {
+        "link": "https://github.com/saranshkataria/",
+        "faIcon": "github"
+      }
+    ]
+  }
+]

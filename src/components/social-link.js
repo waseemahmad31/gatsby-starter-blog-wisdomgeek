@@ -24,7 +24,7 @@ const linkStyle = {
   textDecoration: `none`,
 };
 
-const SocialIcon = ({ link, faIcon }) => (
+const SocialLink = ({ link, faIcon }) => (
   <div style={socialLinkStyle}>
     <a rel="noreferrer noopener" target="_blank" href={link} style={linkStyle}>
       <FontAwesomeIcon
@@ -35,4 +35,4 @@ const SocialIcon = ({ link, faIcon }) => (
   </div>
 );
 
-export default SocialIcon;
+export default SocialLink;
