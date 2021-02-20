@@ -34,7 +34,7 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach(({ frontmatter: { slug, categories } }) => {
     createPage({
       path: `/${categories.join('/')}/${slug}`,
-      component: path.resolve(`src/templates/post-template.js`),
+      component: path.resolve(`src/templates/post/post-template.js`),
       context: {
         slug,
       },

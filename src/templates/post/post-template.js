@@ -2,7 +2,10 @@ import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../../components/layout';
+import RecentPosts from '../../components/recentPosts';
+import style from "./post-template.module.css"
+
 const PostTemplate = ({ data }) => {
   const {
     mdx: {
@@ -13,6 +16,8 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <div className={style.container}>
+      <div className={`${style.coloumn} ${style.articleContainer}`}>
       <article>
         <Image fluid={image.childImageSharp.fluid} />
         <div>
@@ -22,7 +27,11 @@ const PostTemplate = ({ data }) => {
         </div>
         <MDXRenderer>{body}</MDXRenderer>
       </article>
-      <article></article>
+      </div>
+      <div className={`${style.coloumn} ${style.recentArticlesContainer}`}>
+        <RecentPosts/>
+      </div>
+      </div>
     </Layout>
   );
 };

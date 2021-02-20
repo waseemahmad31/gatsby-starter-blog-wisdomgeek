@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.coloumn {
+    display: block;
+    min-height: 1px;
+    float: left;
+    padding-right: 24px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.articleContainer {
+    width: 67%;
+}
+
+.recentArticlesContainer {
+    width: 33%;
+}
