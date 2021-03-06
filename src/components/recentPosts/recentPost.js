@@ -29,7 +29,7 @@ const RecentPost = ({ frontmatter }) => {
                         <span>-</span>
                     </span>
                     <span className={style.postDate}>
-                        <time datetime={date}>Modified date: {date}</time>
+                        <span>Modified date: {date}</span>
                     </span> 
                 </span>
             </div>

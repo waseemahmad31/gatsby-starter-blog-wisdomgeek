@@ -1,0 +1,25 @@
+.container {
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: -1px !important;
+    margin-bottom: 0px !important;
+    line-height: 1;
+    font-family: 'Open Sans', arial, sans-serif;
+    position: relative;
+    clear: both;
+}
+
+.category {
+    pointer-events: auto;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+    color: #0d42a2 !important;
+    font-family: Muli !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+}

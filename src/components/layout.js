@@ -7,6 +7,9 @@ import {
   faTwitter,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
+import {
+  faChevronRight
+} from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
 import Footer from './footer';
 import Header from './header';
@@ -17,7 +20,8 @@ library.add(
   faGithub,
   faInstagram,
   faLinkedin,
-  faYoutube
+  faYoutube,
+  faChevronRight
 );
 
 const pageStyles = {

@@ -10,12 +10,14 @@ exports.createPages = async ({ graphql, actions }) => {
           frontmatter {
             slug
             categories
+            author
           }
         }
       }
       allAuthorsJson {
         nodes {
           id
+          profileImage
         }
       }
       site {
@@ -31,12 +33,13 @@ exports.createPages = async ({ graphql, actions }) => {
     postsPerPage = result.data.site.siteMetadata.postsPerPage,
     numPages = Math.ceil(posts.length / postsPerPage);
 
-  posts.forEach(({ frontmatter: { slug, categories } }) => {
+  posts.forEach(({ frontmatter: { slug, categories, author } }) => {
     createPage({
       path: `/${categories.join('/')}/${slug}`,
       component: path.resolve(`src/templates/post/post-template.js`),
       context: {
         slug,
+        author,
       },
     });
     let categorySlug = '/';

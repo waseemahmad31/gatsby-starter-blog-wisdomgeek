@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.date {
+    color: #aaaaaa;
+    font-family: Muli !important;
+    font-size: 11px !important;
+    line-height: 1 !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+}
+
+.slashIcon {
+    font-size: 11px;
+    text-align: center;
+    width: 17.6px;
+    height: 17.6px;
+    line-height: 17.6px;
+    position: relative;
+    top: 0px;
+}
